@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Encyclopedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #282c34;
+            color: #61dafb;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #20232a;
+            padding: 0.5rem;
+            margin-top: 4rem;
+        }
+        .navbar a {
+            color: #61dafb;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            font-weight: bold;
+        }
+        .navbar a.active {
+            background-color: #61dafb;
+            color: #20232a;
+            border-radius: 5px;
+        }
+        .main-content {
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .tab-button {
+            background-color: #20232a;
+            border: 1px solid #61dafb;
+            color: #61dafb;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 0.2rem;
+        }
+        .tab-button.active {
+            background-color: #61dafb;
+            color: #20232a;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .content-section {
+            margin-bottom: 2rem;
+        }
+        .content-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 2rem;
+        }
+        code {
+            background-color: #282c34;
+            color: #61dafb;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Physics Encyclopedia</h1>
+    </header>
+    <nav class="navbar">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#formulas" class="nav-link">Formulas</a>
+        <a href="#laws" class="nav-link">Laws</a>
+        <a href="#concepts" class="nav-link">Concepts</a>
+        <a href="#discoveries" class="nav-link">Discoveries</a>
+        <a href="#images" class="nav-link">Images</a>
+    </nav>
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <h2>Welcome to the Physics Encyclopedia</h2>
+            <p>This webpage contains a comprehensive collection of physics formulas, laws, concepts, and images. Use the navigation bar to explore the different sections.</p>
+        </section>
+
+        <!-- Formulas Section -->
+        <section id="formulas" class="content-section">
+            <h2>Physics Formulas</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('mechanicsFormulas')">Mechanics</button>
+                <button class="tab-button" onclick="showTab('thermodynamicsFormulas')">Thermodynamics</button>
+                <button class="tab-button" onclick="showTab('electromagnetismFormulas')">Electromagnetism</button>
+                <button class="tab-button" onclick="showTab('opticsFormulas')">Optics</button>
+                <button class="tab-button" onclick="showTab('modernPhysicsFormulas')">Modern Physics</button>
+                <button class="tab-button" onclick="showTab('fluidMechanicsFormulas')">Fluid Mechanics</button>
+                <button class="tab-button" onclick="showTab('wavesFormulas')">Waves</button>
+                <button class="tab-button" onclick="showTab('astronomyFormulas')">Astronomy</button>
+            </div>
+            <div id="mechanicsFormulas" class="tab-content active">
+                <h3>Mechanics</h3>
+
+                <div class="section">
+                    <h3>Kinematics</h3>
+                    <div class="formula">
+                        Displacement (in one dimension):<br>
+                        <code>x = x<sub>0</sub> + v<sub>0</sub> t + &frac12; a t<sup>2</sup></code>
+                    </div>
+                    <div class="formula">
+                        Velocity (in one dimension):<br>
+                        <code>v = v<sub>0</sub> + a t</code><br>
+                        <code>v<sup>2</sup> = v<sub>0</sub><sup>2</sup> + 2 a (x - x<sub>0</sub>)</code>
+                    </div>
+                    <div class="formula">
+                        Average Velocity:<br>
+                        <code> v̅ = (x - x₀) / t</code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Dynamics</h3>
+                    <div class="formula">
+                        Newton’s Second Law:<br>
+                        <code>F = m a</code>
+                    </div>
+                    <div class="formula">
+                        Friction Force:<br>
+                        <code>f<sub>f</sub> = &mu; N</code>
+                    </div>
+                    <div class="formula">
+                        Normal Force (on an inclined plane):<br>
+                        <code>N = mg cos &theta;</code>
+                    </div>
+                    <div class="formula">
+                        Centripetal Force:<br>
+                        <code>F<sub>c</sub> = m v<sup>2</sup> / r</code>
+                    </div>
+                    <div class="formula">
+                        Gravitational Force:<br>
+                        <code>F<sub>g</sub> = G m<sub>1</sub> m<sub>2</sub> / r<sup>2</sup></code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Work and Energy</h3>
+                    <div class="formula">
+                        Work Done by a Force:<br>
+                        <code>W = F &sdot; d &sdot; cos &theta;</code>
+                    </div>
+                    <div class="formula">
+                        Kinetic Energy:<br>
+                        <code>K.E. = &frac12; m v<sup>2</sup></code>
+                    </div>
+                    <div class="formula">
+                        Potential Energy (gravitational):<br>
+                        <code>P.E. = mgh</code>
+                    </div>
+                    <div class="formula">
+                        Work-Energy Theorem:<br>
+                        <code>W<sub>net</sub> = &Delta; K.E.</code>
+                    </div>
+                    <div class="formula">
+                        Conservation of Mechanical Energy:<br>
+                        <code>E<sub>total</sub> = K.E. + P.E. = constant</code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Momentum</h3>
+                    <div class="formula">
+                        Linear Momentum:<br>
+                        <code>p = m v</code>
+                    </div>
+                    <div class="formula">
+                        Impulse:<br>
+                        <code>J = F &sdot; &Delta; t</code><br>
+                        <code>J = &Delta; p = p<sub>f</sub> - p<sub>i</sub></code>
+                    </div>
+                    <div class="formula">
+                        Conservation of Momentum:<br>
+                        <code>p<sub>total, initial</sub> = p<sub>total, final</sub></code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Rotational Motion</h3>
+                    <div class="formula">
+                        Angular Displacement:<br>
+                        <code>&theta;(t) = A cos(&omega; t + &phi;)</code>
+                    </div>
+                    <div class="formula">
+                        Angular Velocity:<br>
+                        <code>&omega; = &omega;<sub>0</sub> + &alpha; t<br>
+                        &omega;<sup>2</sup> = &omega;<sub>0</sub><sup>2</sup> + 2 &alpha; (&theta; - &theta;<sub>0</sub>)</code>
+                    </div>
+                    <div class="formula">
+                        Moment of Inertia:<br>
+                        <code>I = &sum; m<sub>i</sub> r<sub>i</sub><sup>2</sup></code>
+                    </div>
+                    <div class="formula">
+                        Torque:<br>
+                        <code>&tau; = r F sin &theta;</code>
+                    </div>
+                    <div class="formula">
+                        Newton’s Second Law for Rotation:<br>
+                        <code>&tau; = I &alpha;</code>
+                    </div>
+                    <div class="formula">
+                        Rotational Kinetic Energy:<br>
+                        <code>K.E.<sub>rot</sub> = &frac12; I &omega;<sup>2</sup></code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Newton's Laws</h3>
+                    <div class="formula">
+                        First Law (Law of Inertia):<br>
+                        An object remains at rest or in uniform motion unless acted upon by an external force.
+                    </div>
+                    <div class="formula">
+                        Second Law:<br>
+                        <code>F = m a</code>
+                    </div>
+                    <div class="formula">
+                        Third Law:<br>
+                        For every action, there is an equal and opposite reaction.
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Simple Harmonic Motion (SHM)</h3>
+                    <div class="formula">
+                        Displacement in SHM:<br>
+                        <code>x(t) = A cos(&omega; t + &phi;)</code>
+                    </div>
+                    <div class="formula">
+                        Velocity in SHM:<br>
+                        <code>v(t) = -A &omega; sin(&omega; t + &phi;)</code>
+                    </div>
+                    <div class="formula">
+                        Acceleration in SHM:<br>
+                        <code>a(t) = -A &omega;<sup>2</sup> cos(&omega; t + &phi;)</code>
+                    </div>
+                    <div class="formula">
+                        Angular Frequency:<br>
+                        <code>ω =&radic;(k/m)</code>
+                    </div>
+                    <div class="formula">
+                        Period:<br>
+                        <code>T = 2 &pi; &sqrt; (m / k)</code>
+                    </div>
+                    <div class="formula">
+                        Frequency:<br>
+                        <code>f = 1 / T</code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Gravitation</h3>
+                    <div class="formula">
+                        Gravitational Potential Energy:<br>
+                        <code>U = -G m<sub>1</sub> m<sub>2</sub> / r</code>
+                    </div>
+                    <div class="formula">
+                        Gravitational Field Strength:<br>
+                        <code>g = G M / r<sup>2</sup></code>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h3>Work-Energy Principle in Mechanics</h3>
+                    <div class="formula">
+                        Work Done by a Variable Force:<br>
+                        <code>W = &int;<sub>x<sub>1</sub></sub><sup>x<sub>2</sub></sup> F(x) dx</code>
+                    </div>
+                    <div class="formula">
+                        Power:<br>
+                        <code>P = dW / dt = F &sdot; v</code>
+                    </div>
+                </div>
+            </div>
+            <div id="thermodynamicsFormulas" class="tab-content">
+                    <h3>Thermodynamics</h3>
+                    
+                    <div class="section">
+                        <h3>Basic Concepts</h3>
+                        <div class="formula">
+                            First Law of Thermodynamics:<br>
+                            <code>&Delta;U = Q - W</code>
+                        </div>
+                        <div class="formula">
+                            Internal Energy:<br>
+                            <code>U = (3/2)n R T</code> (for a monoatomic ideal gas)
+                        </div>
+                        <div class="formula">
+                            Heat Capacity:<br>
+                            <code>C ={dQ}/{dT}</code>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Ideal Gas Law</h3>
+                        <div class="formula">
+                            Ideal Gas Law:<br>
+                            <code>PV = nRT</code>
+                        </div>
+                        <div class="formula">
+                            Molar Gas Constant:<br>
+                            <code>R = 8.314 J/(mol·K)</code>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Thermodynamic Processes</h3>
+                        <div class="formula">
+                            Isothermal Process:<br>
+                            <code>PV = constant</code>
+                        </div>
+                        <div class="formula">
+                            Adiabatic Process:<br>
+                            <code>PV<sup>&gamma;</sup> = constant</code><br>
+                            <code>T<sub>1</sub> V<sub>1</sub><sup>&gamma;-1</sup> = T<sub>2</sub> V<sub>2</sub><sup>&gamma;-1</sup></code>
+                        </div>
+                        <div class="formula">
+                            Polytropic Process:<br>
+                            <code>PV<sup>n</sup> = constant</code>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Heat Transfer</h3>
+                        <div class="formula">
+                            Heat Conduction (Fourier's Law):<br>
+                            <code>Q = -k A &frac{dT}{dx}</code>
+                        </div>
+                        <div class="formula">
+                            Heat Transfer by Convection:<br>
+                            <code>Q = h A (T<sub>s</sub> - T<sub>f</sub>)</code>
+                        </div>
+                        <div class="formula">
+                            Heat Transfer by Radiation:<br>
+                            <code>Q = &sigma; A T<sup>4</sup></code> (Stefan-Boltzmann Law)
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Thermodynamic Cycles</h3>
+                        <div class="formula">
+                            Efficiency of a Heat Engine:<br>
+                            <code>&eta; = 1 - &frac{T<sub>c</sub>}{T<sub>h</sub>}</code>
+                        </div>
+                        <div class="formula">
+                            Carnot Cycle Efficiency:<br>
+                            <code>&eta; = 1 - &frac{T<sub>c</sub>}{T<sub>h</sub>}</code>
+                        </div>
+                        <div class="formula">
+                            Work Done in a Carnot Cycle:<br>
+                            <code>W = Q<sub>h</sub> - Q<sub>c</sub></code>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Entropy</h3>
+                        <div class="formula">
+                            Change in Entropy:<br>
+                            <code>&Delta;S = &frac{Q}{T}</code>
+                        </div>
+                        <div class="formula">
+                            Entropy Change for an Ideal Gas:<br>
+                            <code>ΔS = n R ln (V<sub>2</sub> / V<sub>1</sub>) + n C<sub>v</sub> ln (T<sub>2</sub> / T<sub>1</sub>)</code>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <h3>Other Thermodynamic Relations</h3>
+                        <div class="formula">
+                            Gibbs Free Energy:<br>
+                            <code>G = H - TS</code>
+                        </div>
+                        <div class="formula">
+                            Helmholtz Free Energy:<br>
+                            <code>F = U - TS</code>
+                        </div>
+                        <div class="formula">
+                            Enthalpy:<br>
+                            <code>H = U + PV</code>
+                        </div>
+                        <div class="formula">
+                            Chemical Potential:<br>
+                            <code>&mu; = &frac12;&part;&minus;G&sol;&part;&minus;n</code>
+                        </div>
+                    </div>
+                </div>
+            <div id="electromagnetismFormulas" class="tab-content">
+                <h3>Electromagnetism</h3>
+
+        <div class="section">
+            <h3>Electrostatics</h3>
+            <div class="formula">
+                Coulomb's Law:<br>
+                <code>F = k &frac{q<sub>1</sub> q<sub>2</sub>}{r²}</code>
+            </div>
+            <div class="formula">
+                Electric Field:<br>
+                <code>E = &frac{F}{q} = k &frac{q}{r²}</code>
+            </div>
+            <div class="formula">
+                Electric Potential:<br>
+                <code>V = k &frac{q}{r}</code>
+            </div>
+            <div class="formula">
+                Electric Potential Energy:<br>
+                <code>U = k &frac{q<sub>1</sub> q<sub>2</sub>}{r}</code>
+            </div>
+            <div class="formula">
+                Capacitance:<br>
+                <code>C = &frac{Q}{V}</code>
+            </div>
+            <div class="formula">
+                Energy Stored in a Capacitor:<br>
+                <code>U = &frac{1}{2} C V²</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Current and Circuits</h3>
+            <div class="formula">
+                Ohm's Law:<br>
+                <code>V = IR</code>
+            </div>
+            <div class="formula">
+                Power in a Circuit:<br>
+                <code>P = VI</code>
+            </div>
+            <div class="formula">
+                Resistance in Series:<br>
+                <code>R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ... + R<sub>n</sub></code>
+            </div>
+            <div class="formula">
+                Resistance in Parallel:<br>
+                <code>&frac{1}{R<sub>total</sub>} = &frac{1}{R<sub>1</sub>} + &frac{1}{R<sub>2</sub>} + ... + &frac{1}{R<sub>n</sub>}</code>
+            </div>
+            <div class="formula">
+                Kirchhoff's Current Law (KCL):<br>
+                <code>&sum; I<sub>in</sub> = &sum; I<sub>out</sub></code>
+            </div>
+            <div class="formula">
+                Kirchhoff's Voltage Law (KVL):<br>
+                <code>&sum; V = 0</code> (in a closed loop)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Magnetism</h3>
+            <div class="formula">
+                Magnetic Force on a Moving Charge:<br>
+                <code>F = q (v × B)</code>
+            </div>
+            <div class="formula">
+                Magnetic Field Due to a Current (Biot-Savart Law):<br>
+                <code>B = &frac{μ₀}{4π} &frac{I (dl × r)}{r³}</code>
+            </div>
+            <div class="formula">
+                Ampère's Law:<br>
+                <code>&oint; B ⋅ dl = μ₀ I<sub>enc</sub></code>
+            </div>
+            <div class="formula">
+                Magnetic Flux:<br>
+                <code>Φ = B A cos(θ)</code>
+            </div>
+            <div class="formula">
+                Faraday's Law of Induction:<br>
+                <code>&epsilon; = - &frac{dΦ}{dt}</code>
+            </div>
+            <div class="formula">
+                Lenz's Law:<br>
+                <code>The direction of induced current opposes the change in flux.</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Electromagnetic Waves</h3>
+            <div class="formula">
+                Wave Equation:<br>
+                <code>∇²E - &frac{1}{c²} &frac{∂²E}{∂t²} = 0</code>
+            </div>
+            <div class="formula">
+                Speed of Light:<br>
+                <code>c = &frac{1}{√(ε₀ μ₀)}</code>
+            </div>
+            <div class="formula">
+                Maxwell's Equations:<br>
+                <ul>
+                    <li>Gauss's Law for Electricity:<br><code>∇ ⋅ E = &frac{ρ}{ε₀}</code></li>
+                    <li>Gauss's Law for Magnetism:<br><code>∇ ⋅ B = 0</code></li>
+                    <li>Faraday's Law:<br><code>∇ × E = - &frac{∂B}{∂t}</code></li>
+                    <li>Ampère's Law with Maxwell's Addition:<br><code>∇ × B = μ₀ J + μ₀ ε₀ &frac{∂E}{∂t}</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="opticsFormulas" class="tab-content">
+        <h3>Optics</h3>
+        
+        <p><strong>Snell’s Law:</strong></p>
+        <ul>
+            <li><code>n₁ sin(θ₁) = n₂ sin(θ₂)</code></li>
+            <li><code>n₁ / n₂ = sin(θ₂) / sin(θ₁)</code></li>
+            <li><code>θ₁ = sin⁻¹((n₂ / n₁) sin(θ₂))</code></li>
+        </ul>
+        
+        <p><strong>Lens Maker’s Formula:</strong></p>
+        <ul>
+            <li><code>\(\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\)</code></li>
+            <li><code>\(\frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)\)</code></li>
+            <li><code>\(f = \frac{R_1 R_2}{(n - 1)(R_2 - R_1)}\)</code></li>
+        </ul>
+        
+        <p><strong>Magnification:</strong></p>
+        <ul>
+            <li><code>M = \frac{d_i}{d_o}</code></li>
+            <li><code>M = \frac{h_i}{h_o}</code></li>
+            <li><code>M = - \frac{d_i}{d_o}</code></li>
+        </ul>
+        
+        <p><strong>Diffraction Limit:</strong></p>
+        <ul>
+            <li><code>θ = 1.22 λ / D</code></li>
+            <li><code>θ = 1.22 \frac{\lambda}{D}</code></li>
+            <li><code>θ = \frac{1.22 \lambda}{D}</code></li>
+        </ul>
+        
+        <p><strong>Optical Path Length:</strong></p>
+        <ul>
+            <li><code>OPL = n \cdot L</code></li>
+            <li><code>OPL = d \cdot \frac{n}{n_0}</code></li>
+        </ul>
+        
+        <p><strong>Thin-Lens Formula:</strong></p>
+        <ul>
+            <li><code>\(\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\)</code></li>
+            <li><code>\(d_i = f \cdot \left(\frac{d_o}{d_o - f}\right)\)</code></li>
+        </ul>
+        
+        <p><strong>Aberration Correction:</strong></p>
+        <ul>
+            <li><code>Δx = \frac{R}{2} \left(\frac{1}{n - 1}\right)</code></li>
+            <li><code>Δy = \frac{R^2}{2f} \left(\frac{1}{n - 1}\right)</code></li>
+        </ul>
+        
+    </div>
+    <div id="modernPhysicsFormulas" class="tab-content">
+        <h3>Modern Physics</h3>
+        
+        <p><strong>Special Relativity:</strong></p>
+        <ul>
+            <li><code>E = mc²</code></li>
+            <li><code>γ = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}</code></li>
+            <li><code>E = γmc²</code></li>
+            <li><code>p = \frac{mv}{\sqrt{1 - \frac{v^2}{c^2}}}</code></li>
+        </ul>
+        
+        <p><strong>Quantum Mechanics:</strong></p>
+        <ul>
+            <li><code>ψ(x, t) = A e^{i (k x - \omega t)}</code></li>
+            <li><code>H \psi = E \psi</code></li>
+            <li><code>E = \frac{h \nu}{2 \pi}</code></li>
+            <li><code>λ = \frac{h}{p}</code></li>
+            <li><code>Δx \cdot Δp \geq \frac{h}{4 \pi}</code></li>
+        </ul>
+        
+        <p><strong>General Relativity:</strong></p>
+        <ul>
+            <li><code>G_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}</code></li>
+            <li><code>R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}</code></li>
+            <li><code>R = g^{\mu \nu} R_{\mu \nu}</code></li>
+        </ul>
+        
+        <p><strong>Atomic Physics:</strong></p>
+        <ul>
+            <li><code>E_n = - \frac{13.6 \text{ eV}}{n^2}</code></li>
+            <li><code>λ = \frac{h c}{E}</code></li>
+            <li><code>E = \frac{hc}{\lambda}</code></li>
+            <li><code>F = \frac{e^2}{4 \pi \epsilon_0 r^2}</code></li>
+        </ul>
+        
+        <p><strong>Nuclear Physics:</strong></p>
+        <ul>
+            <li><code>E = mc^2</code></li>
+            <li><code>Q = (m_{reactants} - m_{products}) c^2</code></li>
+            <li><code>N = N_0 e^{-\lambda t}</code></li>
+            <li><code>λ = \frac{\ln(2)}{T_{1/2}}</code></li>
+            <li><code>T_{1/2} = \frac{\ln(2)}{\lambda}</code></li>
+        </ul>
+        
+    </div>
+            <div id="fluidMechanicsFormulas" class="tab-content">
+                <h3>Fluid Mechanics</h3>
+                <p>Bernoulli’s Equation:</p>
+                <ul>
+                    <li><code>P + 0.5ρv² + ρgh = constant</code></li>
+                </ul>
+                <p>Continuity Equation:</p>
+                <ul>
+                    <li><code>A₁v₁ = A₂v₂</code></li>
+                </ul>
+                <p>Navier-Stokes Equation:</p>
+                <ul>
+                    <li><code>ρ (∂v/∂t + v · ∇v) = -∇P + μ∇²v + ρg</code></li>
+                </ul>
+            </div>
+            <div id="wavesFormulas" class="tab-content">
+                <h3>Waves</h3>
+                <p>Wave Speed:</p>
+                <ul>
+                    <li><code>v = fλ</code></li>
+                </ul>
+                <p>Doppler Effect:</p>
+                <ul>
+                    <li><code>f' = f (v ± v₀) / (v ∓ vs)</code></li>
+                </ul>
+                <p>Interference:</p>
+                <ul>
+                    <li><code>ΔL = mλ</code></li>
+                </ul>
+            </div>
+            <div id="astronomyFormulas" class="tab-content">
+                <h3>Astronomy</h3>
+                <p>Kepler’s Laws:</p>
+                <ul>
+                    <li>First Law: Planets move in elliptical orbits with the Sun at one focus.</li>
+                    <li>Second Law: A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</li>
+                    <li>Third Law: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.</li>
+                </ul>
+                <p>Hubble’s Law:</p>
+                <ul>
+                    <li><code>v = H₀d</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Laws Section -->
+        <section id="laws" class="content-section">
+            <h2>Physics Laws</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('mechanicsLaws')">Mechanics</button>
+                <button class="tab-button" onclick="showTab('thermodynamicsLaws')">Thermodynamics</button>
+                <button class="tab-button" onclick="showTab('electromagnetismLaws')">Electromagnetism</button>
+                <button class="tab-button" onclick="showTab('opticsLaws')">Optics</button>
+                <button class="tab-button" onclick="showTab('modernPhysicsLaws')">Modern Physics</button>
+                <button class="tab-button" onclick="showTab('fluidMechanicsLaws')">Fluid Mechanics</button>
+                <button class="tab-button" onclick="showTab('wavesLaws')">Waves</button>
+                <button class="tab-button" onclick="showTab('astronomyLaws')">Astronomy</button>
+            </div>
+            <div id="mechanicsLaws" class="tab-content active">
+                <h3>Mechanics</h3>
+                <p>Newton's Laws of Motion:</p>
+                <ul>
+                    <li><strong>First Law:</strong> An object in motion stays in motion unless acted upon by an external force.</li>
+                    <li><strong>Second Law:</strong> <code>F = ma</code></li>
+                    <li><strong>Third Law:</strong> For every action, there is an equal and opposite reaction.</li>
+                </ul>
+                <p>Law of Universal Gravitation:</p>
+                <ul>
+                    <li><code>F = G(m₁m₂) / r²</code></li>
+                </ul>
+                <p>Conservation Laws:</p>
+                <ul>
+                    <li><strong>Conservation of Energy:</strong> Total energy in an isolated system remains constant.</li>
+                    <li><strong>Conservation of Momentum:</strong> <code>p<sub>initial</sub> = p<sub>final</sub></code></li>
+                </ul>
+            </div>
+            <div id="thermodynamicsLaws" class="tab-content">
+                <h3>Thermodynamics</h3>
+                <p>First Law of Thermodynamics:</p>
+                <ul>
+                    <li><code>ΔU = Q - W</code></li>
+                </ul>
+                <p>Second Law of Thermodynamics:</p>
+                <ul>
+                    <li><code>ΔS = Q / T</code></li>
+                </ul>
+                <p>Third Law of Thermodynamics:</p>
+                <ul>
+                    <li>The entropy of a perfect crystal approaches zero as temperature approaches absolute zero.</li>
+                </ul>
+            </div>
+            <div id="electromagnetismLaws" class="tab-content">
+                <h3>Electromagnetism</h3>
+                <p>Ohm’s Law:</p>
+                <ul>
+                    <li><code>V = IR</code></li>
+                </ul>
+                <p>Kirchhoff’s Laws:</p>
+                <ul>
+                    <li><strong>Current Law:</strong> <code>ΣI = 0</code></li>
+                    <li><strong>Voltage Law:</strong> <code>ΣV = 0</code></li>
+                </ul>
+                <p>Maxwell’s Equations:</p>
+                <ul>
+                    <li><code>∮ E · dA = Q / ε₀</code></li>
+                    <li><code>∮ B · dA = 0</code></li>
+                    <li><code>∮ E · dl = -dΦ<sub>B</sub>/dt</code></li>
+                    <li><code>∮ B · dl = μ₀I + μ₀ε₀ dΦ<sub>E</sub>/dt</code></li>
+                </ul>
+            </div>
+            <div id="opticsLaws" class="tab-content">
+                <h3>Optics</h3>
+                <p>Snell's Law:</p>
+                <ul>
+                    <li><code>n₁ sin(θ₁) = n₂ sin(θ₂)</code></li>
+                </ul>
+                <p>Law of Reflection:</p>
+                <ul>
+                    <li><code>θ<sub>i</sub> = θ<sub>r</sub></code></li>
+                </ul>
+                <p>Law of Refraction:</p>
+                <ul>
+                    <li><code>n₁ sin(θ₁) = n₂ sin(θ₂)</code></li>
+                </ul>
+            </div>
+            <div id="modernPhysicsLaws" class="tab-content">
+                <h3>Modern Physics</h3>
+                <p>Special Relativity:</p>
+                <ul>
+                    <li>Time Dilation: <code>Δt' = Δt / √(1 - v²/c²)</code></li>
+                    <li>Length Contraction: <code>L' = L √(1 - v²/c²)</code></li>
+                </ul>
+                <p>Quantum Mechanics:</p>
+                <ul>
+                    <li>Heisenberg Uncertainty Principle: <code>ΔxΔp ≥ ħ / 2</code></li>
+                    <li>Schrödinger Equation: <code>iħ (∂ψ/∂t) = Hψ</code></li>
+                </ul>
+            </div>
+            <div id="fluidMechanicsLaws" class="tab-content">
+                <h3>Fluid Mechanics</h3>
+                <p>Bernoulli's Principle:</p>
+                <ul>
+                    <li><code>P + 0.5ρv² + ρgh = constant</code></li>
+                </ul>
+                <p>Continuity Equation:</p>
+                <ul>
+                    <li><code>A₁v₁ = A₂v₂</code></li>
+                </ul>
+                <p>Navier-Stokes Equations:</p>
+                <ul>
+                    <li><code>ρ (∂v/∂t + v · ∇v) = -∇P + μ∇²v + ρg</code></li>
+                </ul>
+            </div>
+            <div id="wavesLaws" class="tab-content">
+                <h3>Waves</h3>
+                <p>Wave Speed:</p>
+                <ul>
+                    <li><code>v = fλ</code></li>
+                </ul>
+                <p>Doppler Effect:</p>
+                <ul>
+                    <li><code>f' = f (v ± v₀) / (v ∓ vs)</code></li>
+                </ul>
+            </div>
+            <div id="astronomyLaws" class="tab-content">
+                <h3>Astronomy</h3>
+                <p>Kepler’s Laws:</p>
+                <ul>
+                    <li>First Law: Planets move in elliptical orbits with the Sun at one focus.</li>
+                    <li>Second Law: A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</li>
+                    <li>Third Law: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.</li>
+                </ul>
+                <p>Hubble’s Law:</p>
+                <ul>
+                    <li><code>v = H₀d</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Concepts Section -->
+        <section id="concepts" class="content-section">
+            <h2>Physics Concepts</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('mechanicsConcepts')">Mechanics</button>
+                <button class="tab-button" onclick="showTab('thermodynamicsConcepts')">Thermodynamics</button>
+                <button class="tab-button" onclick="showTab('electromagnetismConcepts')">Electromagnetism</button>
+                <button class="tab-button" onclick="showTab('opticsConcepts')">Optics</button>
+                <button class="tab-button" onclick="showTab('modernPhysicsConcepts')">Modern Physics</button>
+                <button class="tab-button" onclick="showTab('fluidMechanicsConcepts')">Fluid Mechanics</button>
+                <button class="tab-button" onclick="showTab('wavesConcepts')">Waves</button>
+                <button class="tab-button" onclick="showTab('astronomyConcepts')">Astronomy</button>
+            </div>
+            <div id="mechanicsConcepts" class="tab-content active">
+                <h3>Mechanics</h3>
+                <ul>
+                    <li><strong>Classical Mechanics:</strong> Describes the motion of bodies under the influence of forces.</li>
+                    <li><strong>Newtonian Mechanics:</strong> Focuses on Newton's laws of motion.</li>
+                    <li><strong>Rotational Dynamics:</strong> Examines the rotational motion of objects.</li>
+                    <li><strong>Work-Energy Principle:</strong> Relates work done by forces to changes in kinetic energy.</li>
+                </ul>
+            </div>
+            <div id="thermodynamicsConcepts" class="tab-content">
+                <h3>Thermodynamics</h3>
+                <ul>
+                    <li><strong>Heat:</strong> Transfer of thermal energy between systems.</li>
+                    <li><strong>Entropy:</strong> Measure of disorder or randomness in a system.</li>
+                    <li><strong>Thermodynamic Systems:</strong> Includes isolated, closed, and open systems.</li>
+                </ul>
+            </div>
+            <div id="electromagnetismConcepts" class="tab-content">
+                <h3>Electromagnetism</h3>
+                <ul>
+                    <li><strong>Electric Fields:</strong> Fields that surround electric charges and exert force on other charges.</li>
+                    <li><strong>Magnetic Fields:</strong> Fields produced by moving charges or magnetic materials.</li>
+                    <li><strong>Electromagnetic Waves:</strong> Waves that consist of oscillating electric and magnetic fields.</li>
+                </ul>
+            </div>
+            <div id="opticsConcepts" class="tab-content">
+                <h3>Optics</h3>
+                <ul>
+                    <li><strong>Refraction:</strong> Bending of light as it passes through different media.</li>
+                    <li><strong>Diffraction:</strong> Spreading of waves around obstacles.</li>
+                    <li><strong>Interference:</strong> Overlapping of waves that results in constructive or destructive patterns.</li>
+                </ul>
+            </div>
+            <div id="modernPhysicsConcepts" class="tab-content">
+                <h3>Modern Physics</h3>
+                <ul>
+                    <li><strong>Quantum Mechanics:</strong> Study of particles at the quantum level.</li>
+                    <li><strong>Relativity:</strong> Einstein’s theories of special and general relativity.</li>
+                    <li><strong>Particle Physics:</strong> Study of fundamental particles and their interactions.</li>
+                </ul>
+            </div>
+            <div id="fluidMechanicsConcepts" class="tab-content">
+                <h3>Fluid Mechanics</h3>
+                <ul>
+                    <li><strong>Fluid Properties:</strong> Characteristics such as density, viscosity, and pressure.</li>
+                    <li><strong>Fluid Dynamics:</strong> Study of fluids in motion and their forces.</li>
+                    <li><strong>Hydrodynamics:</strong> Study of the motion of fluids and their interactions with solid boundaries.</li>
+                </ul>
+            </div>
+            <div id="wavesConcepts" class="tab-content">
+                <h3>Waves</h3>
+                <ul>
+                    <li><strong>Wave Types:</strong> Includes transverse and longitudinal waves.</li>
+                    <li><strong>Wave Interference:</strong> Constructive and destructive interference patterns.</li>
+                    <li><strong>Wave-Particle Duality:</strong> Concept that particles exhibit both wave and particle properties.</li>
+                </ul>
+            </div>
+            <div id="astronomyConcepts" class="tab-content">
+                <h3>Astronomy</h3>
+                <ul>
+                    <li><strong>Celestial Mechanics:</strong> Study of the motions of celestial bodies.</li>
+                    <li><strong>Cosmology:</strong> Study of the origins and evolution of the universe.</li>
+                    <li><strong>Stellar Physics:</strong> Study of the physical properties of stars.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Discoveries Section -->
+        <section id="discoveries" class="content-section">
+            <h2>Major Discoveries</h2>
+            <ul>
+                <li><strong>Newton's Laws of Motion:</strong> Formulated by Isaac Newton in the 17th century, laying the foundation of classical mechanics.</li>
+                <li><strong>Theory of Relativity:</strong> Proposed by Albert Einstein, revolutionizing our understanding of space, time, and gravity.</li>
+                <li><strong>Quantum Mechanics:</strong> Developed by Max Planck and others, explaining phenomena at atomic and subatomic levels.</li>
+                <li><strong>Electromagnetic Theory:</strong> Formulated by James Clerk Maxwell, unifying electricity, magnetism, and light.</li>
+            </ul>
+        </section>
+
+        <!-- Images Section -->
+        <section id="images" class="content-section">
+            <h2>Physics Images</h2>
+            <div>
+                <h3>Important Instruments</h3>
+                <img src="images/cathode-ray-tube.jpg" alt="Cathode Ray Tube">
+                <p><strong>Cathode Ray Tube:</strong> Used in early televisions and oscilloscopes.</p>
+                <img src="images/hubble-telescope.jpg" alt="Hubble Space Telescope">
+                <p><strong>Hubble Space Telescope:</strong> Provides high-resolution images of distant galaxies.</p>
+                <img src="images/particle-collider.jpg" alt="Particle Collider">
+                <p><strong>Particle Collider:</strong> Used to accelerate particles to high energies for collision experiments.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                if (button.getAttribute('onclick').includes(tabId)) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const sectionId = this.getAttribute('href').substring(1);
+                showContent(sectionId);
+            });
+        });
+
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href').substring(1) === sectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
