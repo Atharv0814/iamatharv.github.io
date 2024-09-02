@@ -105,9 +105,12 @@
     </nav>
     <main class="main-content">
         <!-- Home Section -->
-        <section id="home" class="content-section">
+        <section id="home" class="content-section active">
             <h2>Welcome to the Physics Encyclopedia</h2>
-            <p>This webpage contains a comprehensive collection of physics formulas, laws, concepts, and images. Use the navigation bar to explore the different sections.</p>
+            <p>Dive into the world of physics with our comprehensive resource tailored for students, educators, researchers, and professionals alike. 
+                Whether you're a student eager to understand fundamental concepts, a teacher looking for reliable teaching materials, a researcher seeking advanced information, or a professor wanting to stay updated with the latest developments, our encyclopedia is designed to support your journey in physics. 
+                Explore detailed entries on key instruments, groundbreaking discoveries, and essential theories that shape our understanding of the physical universe. 
+                Empower your learning and teaching with insights that bridge theoretical knowledge and practical application.</p>
         </section>
 
         <!-- Formulas Section -->
@@ -123,9 +126,9 @@
                 <button class="tab-button" onclick="showTab('wavesFormulas')">Waves</button>
                 <button class="tab-button" onclick="showTab('astronomyFormulas')">Astronomy</button>
             </div>
-            <div id="mechanicsFormulas" class="tab-content active">
+                <div id="mechanicsFormulas" class="tab-content">
                 <h3>Mechanics</h3>
-
+            
                 <div class="section">
                     <h3>Kinematics</h3>
                     <div class="formula">
@@ -139,10 +142,10 @@
                     </div>
                     <div class="formula">
                         Average Velocity:<br>
-                        <code> v̅ = (x - x₀) / t</code>
+                        <code>&#773;v = (x - x<sub>0</sub>) / t</code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Dynamics</h3>
                     <div class="formula">
@@ -166,7 +169,7 @@
                         <code>F<sub>g</sub> = G m<sub>1</sub> m<sub>2</sub> / r<sup>2</sup></code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Work and Energy</h3>
                     <div class="formula">
@@ -190,7 +193,7 @@
                         <code>E<sub>total</sub> = K.E. + P.E. = constant</code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Momentum</h3>
                     <div class="formula">
@@ -207,7 +210,7 @@
                         <code>p<sub>total, initial</sub> = p<sub>total, final</sub></code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Rotational Motion</h3>
                     <div class="formula">
@@ -236,7 +239,7 @@
                         <code>K.E.<sub>rot</sub> = &frac12; I &omega;<sup>2</sup></code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Newton's Laws</h3>
                     <div class="formula">
@@ -252,7 +255,7 @@
                         For every action, there is an equal and opposite reaction.
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Simple Harmonic Motion (SHM)</h3>
                     <div class="formula">
@@ -269,18 +272,18 @@
                     </div>
                     <div class="formula">
                         Angular Frequency:<br>
-                        <code>ω =&radic;(k/m)</code>
+                        <code>&omega; = &radic;(k / m)</code>
                     </div>
                     <div class="formula">
                         Period:<br>
-                        <code>T = 2 &pi; &sqrt; (m / k)</code>
+                        <code>T = 2 &pi; &radic; (m / k)</code>
                     </div>
                     <div class="formula">
                         Frequency:<br>
                         <code>f = 1 / T</code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Gravitation</h3>
                     <div class="formula">
@@ -292,7 +295,7 @@
                         <code>g = G M / r<sup>2</sup></code>
                     </div>
                 </div>
-        
+            
                 <div class="section">
                     <h3>Work-Energy Principle in Mechanics</h3>
                     <div class="formula">
@@ -304,323 +307,322 @@
                         <code>P = dW / dt = F &sdot; v</code>
                     </div>
                 </div>
-            </div>
-            <div id="thermodynamicsFormulas" class="tab-content">
-                    <h3>Thermodynamics</h3>
-                    
-                    <div class="section">
-                        <h3>Basic Concepts</h3>
-                        <div class="formula">
-                            First Law of Thermodynamics:<br>
-                            <code>&Delta;U = Q - W</code>
-                        </div>
-                        <div class="formula">
-                            Internal Energy:<br>
-                            <code>U = (3/2)n R T</code> (for a monoatomic ideal gas)
-                        </div>
-                        <div class="formula">
-                            Heat Capacity:<br>
-                            <code>C ={dQ}/{dT}</code>
-                        </div>
-                    </div>
+                </div>
+                <div id="thermodynamicsFormulas" class="tab-content">
+                <h3>Thermodynamics</h3>
             
-                    <div class="section">
-                        <h3>Ideal Gas Law</h3>
-                        <div class="formula">
-                            Ideal Gas Law:<br>
-                            <code>PV = nRT</code>
-                        </div>
-                        <div class="formula">
-                            Molar Gas Constant:<br>
-                            <code>R = 8.314 J/(mol·K)</code>
-                        </div>
+                <div class="section">
+                    <h3>Basic Concepts</h3>
+                    <div class="formula">
+                        First Law of Thermodynamics:<br>
+                        <code>&Delta;U = Q - W</code>
                     </div>
-            
-                    <div class="section">
-                        <h3>Thermodynamic Processes</h3>
-                        <div class="formula">
-                            Isothermal Process:<br>
-                            <code>PV = constant</code>
-                        </div>
-                        <div class="formula">
-                            Adiabatic Process:<br>
-                            <code>PV<sup>&gamma;</sup> = constant</code><br>
-                            <code>T<sub>1</sub> V<sub>1</sub><sup>&gamma;-1</sup> = T<sub>2</sub> V<sub>2</sub><sup>&gamma;-1</sup></code>
-                        </div>
-                        <div class="formula">
-                            Polytropic Process:<br>
-                            <code>PV<sup>n</sup> = constant</code>
-                        </div>
+                    <div class="formula">
+                        Internal Energy:<br>
+                        <code>U = (3/2) n R T</code> (for a monoatomic ideal gas)
                     </div>
-            
-                    <div class="section">
-                        <h3>Heat Transfer</h3>
-                        <div class="formula">
-                            Heat Conduction (Fourier's Law):<br>
-                            <code>Q = -k A &frac{dT}{dx}</code>
-                        </div>
-                        <div class="formula">
-                            Heat Transfer by Convection:<br>
-                            <code>Q = h A (T<sub>s</sub> - T<sub>f</sub>)</code>
-                        </div>
-                        <div class="formula">
-                            Heat Transfer by Radiation:<br>
-                            <code>Q = &sigma; A T<sup>4</sup></code> (Stefan-Boltzmann Law)
-                        </div>
-                    </div>
-            
-                    <div class="section">
-                        <h3>Thermodynamic Cycles</h3>
-                        <div class="formula">
-                            Efficiency of a Heat Engine:<br>
-                            <code>&eta; = 1 - &frac{T<sub>c</sub>}{T<sub>h</sub>}</code>
-                        </div>
-                        <div class="formula">
-                            Carnot Cycle Efficiency:<br>
-                            <code>&eta; = 1 - &frac{T<sub>c</sub>}{T<sub>h</sub>}</code>
-                        </div>
-                        <div class="formula">
-                            Work Done in a Carnot Cycle:<br>
-                            <code>W = Q<sub>h</sub> - Q<sub>c</sub></code>
-                        </div>
-                    </div>
-            
-                    <div class="section">
-                        <h3>Entropy</h3>
-                        <div class="formula">
-                            Change in Entropy:<br>
-                            <code>&Delta;S = &frac{Q}{T}</code>
-                        </div>
-                        <div class="formula">
-                            Entropy Change for an Ideal Gas:<br>
-                            <code>ΔS = n R ln (V<sub>2</sub> / V<sub>1</sub>) + n C<sub>v</sub> ln (T<sub>2</sub> / T<sub>1</sub>)</code>
-                        </div>
-                    </div>
-            
-                    <div class="section">
-                        <h3>Other Thermodynamic Relations</h3>
-                        <div class="formula">
-                            Gibbs Free Energy:<br>
-                            <code>G = H - TS</code>
-                        </div>
-                        <div class="formula">
-                            Helmholtz Free Energy:<br>
-                            <code>F = U - TS</code>
-                        </div>
-                        <div class="formula">
-                            Enthalpy:<br>
-                            <code>H = U + PV</code>
-                        </div>
-                        <div class="formula">
-                            Chemical Potential:<br>
-                            <code>&mu; = &frac12;&part;&minus;G&sol;&part;&minus;n</code>
-                        </div>
+                    <div class="formula">
+                        Heat Capacity:<br>
+                        <code>C = dQ / dT</code>
                     </div>
                 </div>
-            <div id="electromagnetismFormulas" class="tab-content">
+            
+                <div class="section">
+                    <h3>Ideal Gas Law</h3>
+                    <div class="formula">
+                        Ideal Gas Law:<br>
+                        <code>PV = nRT</code>
+                    </div>
+                    <div class="formula">
+                        Molar Gas Constant:<br>
+                        <code>R = 8.314 J/(mol·K)</code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Thermodynamic Processes</h3>
+                    <div class="formula">
+                        Isothermal Process:<br>
+                        <code>PV = constant</code>
+                    </div>
+                    <div class="formula">
+                        Adiabatic Process:<br>
+                        <code>PV<sup>&gamma;</sup> = constant</code><br>
+                        <code>T<sub>1</sub> V<sub>1</sub><sup>&gamma;-1</sup> = T<sub>2</sub> V<sub>2</sub><sup>&gamma;-1</sup></code>
+                    </div>
+                    <div class="formula">
+                        Polytropic Process:<br>
+                        <code>PV<sup>n</sup> = constant</code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Heat Transfer</h3>
+                    <div class="formula">
+                        Heat Conduction (Fourier's Law):<br>
+                        <code>Q = -k A (dT / dx)</code>
+                    </div>
+                    <div class="formula">
+                        Heat Transfer by Convection:<br>
+                        <code>Q = h A (T<sub>s</sub> - T<sub>f</sub>)</code>
+                    </div>
+                    <div class="formula">
+                        Heat Transfer by Radiation:<br>
+                        <code>Q = &sigma; A T<sup>4</sup></code> (Stefan-Boltzmann Law)
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Thermodynamic Cycles</h3>
+                    <div class="formula">
+                        Efficiency of a Heat Engine:<br>
+                        <code>&eta; = 1 - (T<sub>c</sub> / T<sub>h</sub>)</code>
+                    </div>
+                    <div class="formula">
+                        Carnot Cycle Efficiency:<br>
+                        <code>&eta; = 1 - (T<sub>c</sub> / T<sub>h</sub>)</code>
+                    </div>
+                    <div class="formula">
+                        Work Done in a Carnot Cycle:<br>
+                        <code>W = Q<sub>h</sub> - Q<sub>c</sub></code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Entropy</h3>
+                    <div class="formula">
+                        Change in Entropy:<br>
+                        <code>&Delta;S = Q / T</code>
+                    </div>
+                    <div class="formula">
+                        Entropy Change for an Ideal Gas:<br>
+                        <code>&Delta;S = n R ln (V<sub>2</sub> / V<sub>1</sub>) + n C<sub>v</sub> ln (T<sub>2</sub> / T<sub>1</sub>)</code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Other Thermodynamic Relations</h3>
+                    <div class="formula">
+                        Gibbs Free Energy:<br>
+                        <code>G = H - TS</code>
+                    </div>
+                    <div class="formula">
+                        Helmholtz Free Energy:<br>
+                        <code>F = U - TS</code>
+                    </div>
+                    <div class="formula">
+                        Enthalpy:<br>
+                        <code>H = U + PV</code>
+                    </div>
+                    <div class="formula">
+                        Chemical Potential:<br>
+                        <code>&mu; = &part;G / &part;n</code>
+                    </div>
+                </div>
+                </div>
+                <div id="electromagnetismFormulas" class="tab-content">
                 <h3>Electromagnetism</h3>
-
-        <div class="section">
-            <h3>Electrostatics</h3>
-            <div class="formula">
-                Coulomb's Law:<br>
-                <code>F = k &frac{q<sub>1</sub> q<sub>2</sub>}{r²}</code>
-            </div>
-            <div class="formula">
-                Electric Field:<br>
-                <code>E = &frac{F}{q} = k &frac{q}{r²}</code>
-            </div>
-            <div class="formula">
-                Electric Potential:<br>
-                <code>V = k &frac{q}{r}</code>
-            </div>
-            <div class="formula">
-                Electric Potential Energy:<br>
-                <code>U = k &frac{q<sub>1</sub> q<sub>2</sub>}{r}</code>
-            </div>
-            <div class="formula">
-                Capacitance:<br>
-                <code>C = &frac{Q}{V}</code>
-            </div>
-            <div class="formula">
-                Energy Stored in a Capacitor:<br>
-                <code>U = &frac{1}{2} C V²</code>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Current and Circuits</h3>
-            <div class="formula">
-                Ohm's Law:<br>
-                <code>V = IR</code>
-            </div>
-            <div class="formula">
-                Power in a Circuit:<br>
-                <code>P = VI</code>
-            </div>
-            <div class="formula">
-                Resistance in Series:<br>
-                <code>R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ... + R<sub>n</sub></code>
-            </div>
-            <div class="formula">
-                Resistance in Parallel:<br>
-                <code>&frac{1}{R<sub>total</sub>} = &frac{1}{R<sub>1</sub>} + &frac{1}{R<sub>2</sub>} + ... + &frac{1}{R<sub>n</sub>}</code>
-            </div>
-            <div class="formula">
-                Kirchhoff's Current Law (KCL):<br>
-                <code>&sum; I<sub>in</sub> = &sum; I<sub>out</sub></code>
-            </div>
-            <div class="formula">
-                Kirchhoff's Voltage Law (KVL):<br>
-                <code>&sum; V = 0</code> (in a closed loop)
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Magnetism</h3>
-            <div class="formula">
-                Magnetic Force on a Moving Charge:<br>
-                <code>F = q (v × B)</code>
-            </div>
-            <div class="formula">
-                Magnetic Field Due to a Current (Biot-Savart Law):<br>
-                <code>B = &frac{μ₀}{4π} &frac{I (dl × r)}{r³}</code>
-            </div>
-            <div class="formula">
-                Ampère's Law:<br>
-                <code>&oint; B ⋅ dl = μ₀ I<sub>enc</sub></code>
-            </div>
-            <div class="formula">
-                Magnetic Flux:<br>
-                <code>Φ = B A cos(θ)</code>
-            </div>
-            <div class="formula">
-                Faraday's Law of Induction:<br>
-                <code>&epsilon; = - &frac{dΦ}{dt}</code>
-            </div>
-            <div class="formula">
-                Lenz's Law:<br>
-                <code>The direction of induced current opposes the change in flux.</code>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Electromagnetic Waves</h3>
-            <div class="formula">
-                Wave Equation:<br>
-                <code>∇²E - &frac{1}{c²} &frac{∂²E}{∂t²} = 0</code>
-            </div>
-            <div class="formula">
-                Speed of Light:<br>
-                <code>c = &frac{1}{√(ε₀ μ₀)}</code>
-            </div>
-            <div class="formula">
-                Maxwell's Equations:<br>
-                <ul>
-                    <li>Gauss's Law for Electricity:<br><code>∇ ⋅ E = &frac{ρ}{ε₀}</code></li>
-                    <li>Gauss's Law for Magnetism:<br><code>∇ ⋅ B = 0</code></li>
-                    <li>Faraday's Law:<br><code>∇ × E = - &frac{∂B}{∂t}</code></li>
-                    <li>Ampère's Law with Maxwell's Addition:<br><code>∇ × B = μ₀ J + μ₀ ε₀ &frac{∂E}{∂t}</code></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div id="opticsFormulas" class="tab-content">
+            
+                <div class="section">
+                    <h3>Electrostatics</h3>
+                    <div class="formula">
+                        Coulomb's Law:<br>
+                        <code>F = k &frac14; q<sub>1</sub> q<sub>2</sub> / r²</code>
+                    </div>
+                    <div class="formula">
+                        Electric Field:<br>
+                        <code>E = F / q = k &frac14; q / r²</code>
+                    </div>
+                    <div class="formula">
+                        Electric Potential:<br>
+                        <code>V = k &frac14; q / r</code>
+                    </div>
+                    <div class="formula">
+                        Electric Potential Energy:<br>
+                        <code>U = k &frac14; q<sub>1</sub> q<sub>2</sub> / r</code>
+                    </div>
+                    <div class="formula">
+                        Capacitance:<br>
+                        <code>C = &frac14; Q / V</code>
+                    </div>
+                    <div class="formula">
+                        Energy Stored in a Capacitor:<br>
+                        <code>U = &frac14; 1 / 2 C V²</code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Current and Circuits</h3>
+                    <div class="formula">
+                        Ohm's Law:<br>
+                        <code>V = IR</code>
+                    </div>
+                    <div class="formula">
+                        Power in a Circuit:<br>
+                        <code>P = VI</code>
+                    </div>
+                    <div class="formula">
+                        Resistance in Series:<br>
+                        <code>R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ... + R<sub>n</sub></code>
+                    </div>
+                    <div class="formula">
+                        Resistance in Parallel:<br>
+                        <code>1 / R<sub>total</sub> = 1 / R<sub>1</sub> + 1 / R<sub>2</sub> + ... + 1 / R<sub>n</sub></code>
+                    </div>
+                    <div class="formula">
+                        Kirchhoff's Current Law (KCL):<br>
+                        <code>&sum; I<sub>in</sub> = &sum; I<sub>out</sub></code>
+                    </div>
+                    <div class="formula">
+                        Kirchhoff's Voltage Law (KVL):<br>
+                        <code>&sum; V = 0</code> (in a closed loop)
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Magnetism</h3>
+                    <div class="formula">
+                        Magnetic Force on a Moving Charge:<br>
+                        <code>F = q (v × B)</code>
+                    </div>
+                    <div class="formula">
+                        Magnetic Field Due to a Current (Biot-Savart Law):<br>
+                        <code>B = &frac14; μ₀ / (4π) I (dl × r) / r³</code>
+                    </div>
+                    <div class="formula">
+                        Ampère's Law:<br>
+                        <code>&oint; B ⋅ dl = μ₀ I<sub>enc</sub></code>
+                    </div>
+                    <div class="formula">
+                        Magnetic Flux:<br>
+                        <code>Φ = B A cos(θ)</code>
+                    </div>
+                    <div class="formula">
+                        Faraday's Law of Induction:<br>
+                        <code>&epsilon; = - &frac14; dΦ / dt</code>
+                    </div>
+                    <div class="formula">
+                        Lenz's Law:<br>
+                        <code>The direction of induced current opposes the change in flux.</code>
+                    </div>
+                </div>
+            
+                <div class="section">
+                    <h3>Electromagnetic Waves</h3>
+                    <div class="formula">
+                        Wave Equation:<br>
+                        <code>∇²E - &frac14; 1 / c² &frac14; ∂²E / ∂t² = 0</code>
+                    </div>
+                    <div class="formula">
+                        Speed of Light:<br>
+                        <code>c = 1 / √(ε₀ μ₀)</code>
+                    </div>
+                    <div class="formula">
+                        Maxwell's Equations:<br>
+                        <ul>
+                            <li>Gauss's Law for Electricity:<br><code>∇ ⋅ E = ρ / ε₀</code></li>
+                            <li>Gauss's Law for Magnetism:<br><code>∇ ⋅ B = 0</code></li>
+                            <li>Faraday's Law:<br><code>∇ × E = - ∂B / ∂t</code></li>
+                            <li>Ampère's Law with Maxwell's Addition:<br><code>∇ × B = μ₀ J + μ₀ ε₀ ∂E / ∂t</code></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>            
+                <div id="opticsFormulas" class="tab-content">
         <h3>Optics</h3>
         
         <p><strong>Snell’s Law:</strong></p>
         <ul>
-            <li><code>n₁ sin(θ₁) = n₂ sin(θ₂)</code></li>
-            <li><code>n₁ / n₂ = sin(θ₂) / sin(θ₁)</code></li>
-            <li><code>θ₁ = sin⁻¹((n₂ / n₁) sin(θ₂))</code></li>
+            <li><code>n<sub>1</sub> sin(θ<sub>1</sub>) = n<sub>2</sub> sin(θ<sub>2</sub>)</code></li>
+            <li><code>n<sub>1</sub> / n<sub>2</sub> = sin(θ<sub>2</sub>) / sin(θ<sub>1</sub>)</code></li>
+            <li><code>θ<sub>1</sub> = sin<sup>-1</sup>((n<sub>2</sub> / n<sub>1</sub>) sin(θ<sub>2</sub>))</code></li>
         </ul>
         
         <p><strong>Lens Maker’s Formula:</strong></p>
         <ul>
-            <li><code>\(\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\)</code></li>
-            <li><code>\(\frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)\)</code></li>
-            <li><code>\(f = \frac{R_1 R_2}{(n - 1)(R_2 - R_1)}\)</code></li>
+            <li><code>1 / f = 1 / d<sub>o</sub> + 1 / d<sub>i</sub></code></li>
+            <li><code>1 / f = (n - 1) &times; (1 / R<sub>1</sub> - 1 / R<sub>2</sub>)</code></li>
+            <li><code>f = (R<sub>1</sub> &times; R<sub>2</sub>) / ((n - 1) &times; (R<sub>2</sub> - R<sub>1</sub>))</code></li>
         </ul>
         
         <p><strong>Magnification:</strong></p>
         <ul>
-            <li><code>M = \frac{d_i}{d_o}</code></li>
-            <li><code>M = \frac{h_i}{h_o}</code></li>
-            <li><code>M = - \frac{d_i}{d_o}</code></li>
+            <li><code>M = d<sub>i</sub> / d<sub>o</sub></code></li>
+            <li><code>M = h<sub>i</sub> / h<sub>o</sub></code></li>
+            <li><code>M = - d<sub>i</sub> / d<sub>o</sub></code></li>
         </ul>
         
         <p><strong>Diffraction Limit:</strong></p>
         <ul>
-            <li><code>θ = 1.22 λ / D</code></li>
-            <li><code>θ = 1.22 \frac{\lambda}{D}</code></li>
-            <li><code>θ = \frac{1.22 \lambda}{D}</code></li>
+            <li><code>θ = 1.22 &lambda; / D</code></li>
+            <li><code>θ = 1.22 &lambda; / D</code></li>
+            <li><code>θ = 1.22 &lambda; / D</code></li>
         </ul>
         
         <p><strong>Optical Path Length:</strong></p>
         <ul>
-            <li><code>OPL = n \cdot L</code></li>
-            <li><code>OPL = d \cdot \frac{n}{n_0}</code></li>
+            <li><code>OPL = n &times; L</code></li>
+            <li><code>OPL = d &times; (n / n<sub>0</sub>)</code></li>
         </ul>
         
         <p><strong>Thin-Lens Formula:</strong></p>
         <ul>
-            <li><code>\(\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\)</code></li>
-            <li><code>\(d_i = f \cdot \left(\frac{d_o}{d_o - f}\right)\)</code></li>
+            <li><code>1 / f = 1 / d<sub>o</sub> + 1 / d<sub>i</sub></code></li>
+            <li><code>d<sub>i</sub> = f &times; (d<sub>o</sub> / (d<sub>o</sub> - f))</code></li>
         </ul>
         
         <p><strong>Aberration Correction:</strong></p>
         <ul>
-            <li><code>Δx = \frac{R}{2} \left(\frac{1}{n - 1}\right)</code></li>
-            <li><code>Δy = \frac{R^2}{2f} \left(\frac{1}{n - 1}\right)</code></li>
+            <li><code>&Delta;x = R / 2 &times; (1 / (n - 1))</code></li>
+            <li><code>&Delta;y = R<sup>2</sup> / (2 f) &times; (1 / (n - 1))</code></li>
         </ul>
         
-    </div>
-    <div id="modernPhysicsFormulas" class="tab-content">
+                </div>
+                <div id="modernPhysicsFormulas" class="tab-content">
         <h3>Modern Physics</h3>
         
         <p><strong>Special Relativity:</strong></p>
         <ul>
-            <li><code>E = mc²</code></li>
-            <li><code>γ = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}</code></li>
-            <li><code>E = γmc²</code></li>
-            <li><code>p = \frac{mv}{\sqrt{1 - \frac{v^2}{c^2}}}</code></li>
+            <li><code>E = mc<sup>2</sup></code></li>
+            <li><code>&gamma; = 1 / &radic; (1 - v<sup>2</sup> / c<sup>2</sup>)</code></li>
+            <li><code>E = &gamma; mc<sup>2</sup></code></li>
+            <li><code>p = mv / &radic; (1 - v<sup>2</sup> / c<sup>2</sup>)</code></li>
         </ul>
         
         <p><strong>Quantum Mechanics:</strong></p>
         <ul>
-            <li><code>ψ(x, t) = A e^{i (k x - \omega t)}</code></li>
-            <li><code>H \psi = E \psi</code></li>
-            <li><code>E = \frac{h \nu}{2 \pi}</code></li>
-            <li><code>λ = \frac{h}{p}</code></li>
-            <li><code>Δx \cdot Δp \geq \frac{h}{4 \pi}</code></li>
+            <li><code>&psi;(x, t) = A e<sup>i (k x - &omega; t)</sup></code></li>
+            <li><code>H &psi; = E &psi;</code></li>
+            <li><code>E = h &nu; / (2 &pi;)</code></li>
+            <li><code>&lambda; = h / p</code></li>
+            <li><code>&Delta;x &middot; &Delta;p &ge; h / (4 &pi;)</code></li>
         </ul>
         
         <p><strong>General Relativity:</strong></p>
         <ul>
-            <li><code>G_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}</code></li>
-            <li><code>R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}</code></li>
-            <li><code>R = g^{\mu \nu} R_{\mu \nu}</code></li>
+            <li><code>G<sub>&mu; &nu;</sub> = 8 &pi; G / c<sup>4</sup> T<sub>&mu; &nu;</sub></code></li>
+            <li><code>R<sub>&mu; &nu;</sub> - 1 / 2 R g<sub>&mu; &nu;</sub> = 8 &pi; G / c<sup>4</sup> T<sub>&mu; &nu;</sub></code></li>
+            <li><code>R = g<sup>&mu; &nu;</sup> R<sub>&mu; &nu;</sub></code></li>
         </ul>
         
         <p><strong>Atomic Physics:</strong></p>
         <ul>
-            <li><code>E_n = - \frac{13.6 \text{ eV}}{n^2}</code></li>
-            <li><code>λ = \frac{h c}{E}</code></li>
-            <li><code>E = \frac{hc}{\lambda}</code></li>
-            <li><code>F = \frac{e^2}{4 \pi \epsilon_0 r^2}</code></li>
+            <li><code>E<sub>n</sub> = - 13.6 eV / n<sup>2</sup></code></li>
+            <li><code>&lambda; = h c / E</code></li>
+            <li><code>E = h c / &lambda;</code></li>
+            <li><code>F = e<sup>2</sup> / (4 &pi; &epsilon;<sub>0</sub> r<sup>2</sup>)</code></li>
         </ul>
         
         <p><strong>Nuclear Physics:</strong></p>
         <ul>
-            <li><code>E = mc^2</code></li>
-            <li><code>Q = (m_{reactants} - m_{products}) c^2</code></li>
-            <li><code>N = N_0 e^{-\lambda t}</code></li>
-            <li><code>λ = \frac{\ln(2)}{T_{1/2}}</code></li>
-            <li><code>T_{1/2} = \frac{\ln(2)}{\lambda}</code></li>
+            <li><code>E = mc<sup>2</sup></code></li>
+            <li><code>Q = (m<sub>reactants</sub> - m<sub>products</sub>) c<sup>2</sup></code></li>
+            <li><code>N = N<sub>0</sub> e<sup>-&lambda; t</sup></code></li>
+            <li><code>&lambda; = ln(2) / T<sub>1/2</sub></code></li>
+            <li><code>T<sub>1/2</sub> = ln(2) / &lambda;</code></li>
         </ul>
-        
-    </div>
-            <div id="fluidMechanicsFormulas" class="tab-content">
+                </div>
+                <div id="fluidMechanicsFormulas" class="tab-content">
                 <h3>Fluid Mechanics</h3>
                 <p>Bernoulli’s Equation:</p>
                 <ul>
@@ -634,8 +636,8 @@
                 <ul>
                     <li><code>ρ (∂v/∂t + v · ∇v) = -∇P + μ∇²v + ρg</code></li>
                 </ul>
-            </div>
-            <div id="wavesFormulas" class="tab-content">
+                </div>
+                <div id="wavesFormulas" class="tab-content">
                 <h3>Waves</h3>
                 <p>Wave Speed:</p>
                 <ul>
@@ -649,8 +651,8 @@
                 <ul>
                     <li><code>ΔL = mλ</code></li>
                 </ul>
-            </div>
-            <div id="astronomyFormulas" class="tab-content">
+                </div>
+                <div id="astronomyFormulas" class="tab-content">
                 <h3>Astronomy</h3>
                 <p>Kepler’s Laws:</p>
                 <ul>
@@ -678,7 +680,7 @@
                 <button class="tab-button" onclick="showTab('wavesLaws')">Waves</button>
                 <button class="tab-button" onclick="showTab('astronomyLaws')">Astronomy</button>
             </div>
-            <div id="mechanicsLaws" class="tab-content active">
+            <div id="mechanicsLaws" class="tab-content">
                 <h3>Mechanics</h3>
                 <p>Newton's Laws of Motion:</p>
                 <ul>
@@ -812,7 +814,7 @@
                 <button class="tab-button" onclick="showTab('wavesConcepts')">Waves</button>
                 <button class="tab-button" onclick="showTab('astronomyConcepts')">Astronomy</button>
             </div>
-            <div id="mechanicsConcepts" class="tab-content active">
+            <div id="mechanicsConcepts" class="tab-content">
                 <h3>Mechanics</h3>
                 <ul>
                     <li><strong>Classical Mechanics:</strong> Describes the motion of bodies under the influence of forces.</li>
@@ -901,10 +903,61 @@
                 <p><strong>Hubble Space Telescope:</strong> Provides high-resolution images of distant galaxies.</p>
                 <img src="images/particle-collider.jpg" alt="Particle Collider">
                 <p><strong>Particle Collider:</strong> Used to accelerate particles to high energies for collision experiments.</p>
+                <img src="images/microscope.jpg" alt="Microscope">
+                <p><strong>Microscope:</strong> Used to observe small objects that cannot be seen with the naked eye.</p>
+                <img src="images/spectrometer.jpg" alt="Spectrometer">
+                <p><strong>Spectrometer:</strong> Measures the properties of light over a specific portion of the electromagnetic spectrum.</p>
+                <img src="images/thermometer.jpg" alt="Thermometer">
+                <p><strong>Thermometer:</strong> Measures temperature through various methods including mercury, alcohol, and digital sensors.</p>
+                <img src="images/barometer.jpg" alt="Barometer">
+                <p><strong>Barometer:</strong> Measures atmospheric pressure, useful for weather forecasting.</p>
+                <img src="images/pendulum.jpg" alt="Pendulum">
+                <p><strong>Pendulum:</strong> Used to study motion and gravitational acceleration.</p>
+                <img src="images/galvanometer.jpg" alt="Galvanometer">
+                <p><strong>Galvanometer:</strong> Measures small electrical currents.</p>
+                <img src="images/voltmeter.jpg" alt="Voltmeter">
+                <p><strong>Voltmeter:</strong> Measures the electrical potential difference between two points in a circuit.</p>
+                <img src="images/oscilloscope.jpg" alt="Oscilloscope">
+                <p><strong>Oscilloscope:</strong> Used to view and analyze the waveform of electronic signals.</p>
+                <img src="images/laser.jpg" alt="Laser">
+                <p><strong>Laser:</strong> Emits light through optical amplification based on stimulated emission of radiation.</p>
+                <img src="images/ammeter.jpg" alt="Ammeter">
+                <p><strong>Ammeter:</strong> Measures the current flowing through a circuit.</p>
+                <img src="images/inductor.jpg" alt="Inductor">
+                <p><strong>Inductor:</strong> Stores energy in a magnetic field when electric current flows through it.</p>
+                <img src="images/capacitor.jpg" alt="Capacitor">
+                <p><strong>Capacitor:</strong> Stores electrical energy in an electric field for various applications.</p>
+                <img src="images/resistor.jpg" alt="Resistor">
+                <p><strong>Resistor:</strong> Limits the flow of electric current in a circuit.</p>
+                <img src="images/digitalmultimeter.jpg" alt="Digital Multimeter">
+                <p><strong>Digital Multimeter:</strong> Measures voltage, current, and resistance.</p>
+                <img src="images/transformer.jpg" alt="Transformer">
+                <p><strong>Transformer:</strong> Changes the voltage of an alternating current (AC) supply.</p>
+                <img src="images/sensor.jpg" alt="Sensor">
+                <p><strong>Sensor:</strong> Detects changes in physical conditions such as temperature, light, or motion and converts them into signals.</p>
+                <img src="images/magnetometer.jpg" alt="Magnetometer">
+                <p><strong>Magnetometer:</strong> Measures the strength and direction of magnetic fields.</p>
+                <img src="images/cryostat.jpg" alt="Cryostat">
+                <p><strong>Cryostat:</strong> Maintains extremely low temperatures for scientific experiments.</p>
+                <img src="images/frequency-counter.jpg" alt="Frequency Counter">
+                <p><strong>Frequency Counter:</strong> Measures the frequency of oscillating signals.</p>
+                <img src="images/magnetron.jpg" alt="Magnetron">
+                <p><strong>Magnetron:</strong> Generates microwaves using a magnetic field and oscillating electrons.</p>
+                <img src="images/x-ray-tube.jpg" alt="X-Ray Tube">
+                <p><strong>X-Ray Tube:</strong> Produces X-rays for imaging and diagnostic purposes.</p>
+                <img src="images/atomic-force-microscope.jpg" alt="Atomic Force Microscope">
+                <p><strong>Atomic Force Microscope:</strong> Measures surface forces at the atomic scale with high precision.</p>
+                <img src="images/fluorometer.jpg" alt="Fluorometer">
+                <p><strong>Fluorometer:</strong> Measures the fluorescence of samples to analyze their properties.</p>
+                <img src="images/geiger-counter.jpg" alt="Geiger Counter">
+                <p><strong>Geiger Counter:</strong> Detects and measures radiation levels, including alpha, beta, and gamma rays.</p>
+                <img src="images/laser-interferometer.jpg" alt="Laser Interferometer">
+                <p><strong>Laser Interferometer:</strong> Measures tiny displacements using laser interference patterns.</p>
+                <img src="images/spectrophotometer.jpg" alt="Spectrophotometer">
+                <p><strong>Spectrophotometer:</strong> Measures the intensity of light at different wavelengths to analyze the absorption properties of materials.</p>
             </div>
         </section>
     </main>
-
     <script>
         function showTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
